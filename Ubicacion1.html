@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Universidad</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/uni2.css"> 
+	<!-- 	<link rel="stylesheet" media="(max-width: 900px)" type="text/css" href="css/media-querie.css">  -->
+
+
+</head>
+<body>
+
+	<section id="portada" class="portada background"><!-- Portada -->
+
+		<header id="header"  class="header contenedor"> <!-- header -->		
+			<figure class="logotipo"> <!-- logotipo -->
+				<img src="images/lp1.png" alt="Universidad Autonoma Grabiel Rene Moreno Montero LOGO" width="280" height=auto >
+			</figure>
+			<nav class="menu"><!-- menu -->
+				<ul>
+					<li>
+						<a href="index.html">Inicio</a>
+					</li>
+					<li>
+						<a href="Ubicacion1.html">Ubicacion</a>
+					</li>
+					<li>
+						<a href="otros1.html">Actividades</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="contenedor">
+			<!-- <h3 class="title-a">Universidad Autonoma Grabiel Moreno Montero</h3>  -->
+			<a class="button" href="#formulario">Mas Info.</a><!-- boton -->
+		</div>
+	</section>
+	
+	<section id="publicaciones" class="publicaciones contenedor"><!-- pulblicariones -->
+		<center>
+			<h2><strong>UBICACIÓN	GEOGRÁFICA</strong></h2> <!-- titulo1 -->
+			<p>En esta sección se puede observar la ubicación geográfica de la Universidad Autónoma Gabriel René Moreno, tanto del Campus Universitario que está ubicado entre las avenidas Centenario, Venezuela y Av. 26 de Febrero (2° Anillo de circunvalación); como también los módulos ubicados sobre la Avenida Busch, Av. Hernando Sanabria y Av. 26 de Febrero (2° Anillo de Circunvalación).</p>
+			
+		</center>
+		<section class="mapacompleto">
+			<!-- <h1>Actividades</h1> -->
+			<div class="mapa">
+				<center>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7598.666490919308!2d-63.19701986053396!3d-17.77602866473539!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7fd822f967b%3A0x9dbd7bc1c94634a4!2sUniversidad+Aut%C3%B3noma+Gabriel+Rene+Moreno!5e0!3m2!1ses!2smx!4v1503668436707" width="800" height="800" frameborder="0" style="border:
+					2px solid black"  allowfullscreen></iframe>			
+
+				</center>
+			</div>
+			<p></p>
+			<center>
+				<p>Última actualización 25/08/2017
+
+				</p>
+				
+			</center>
+		</section>
+
+	</section>
+
+
+	<footer class="footer" id="foo">
+		<div class="contenedor">
+			<div class="contacto">
+				<img src="images/LogoU.png" alt="logotipo UAGRM" width="230px" height="auto"><!-- IMG -->
+				<a href="tel:+59175351043"><strong>Telefono: </strong><span>75351043</span></a><!-- TEL -->
+<a href="mailto:"><strong>E-mail: </strong><span>info@uagrm.com</span></a><!--EMAIL
+-->		
+</div>
+<form class="formulario" id="formulario">
+	<div class="col1">
+		<label for="nombre">Nombre</label>
+		<input type="text" placeholder="Ejem. Juan" id="nombre"> <br>
+		<label for="email">E-mail</label>
+		<input type="email" required="" placeholder="Ejem. juan@email.com" id="email">
+		<div class="sexo">
+			<label for="mujer">
+				<input type="radio" id="mujer" checked name="sexo" value="mujer">Mujer</label><br>
+				<label for="hombre">
+					<input type="radio" id="hombre" name="sexo" value="hombre">Hombre</label>
+				</div>
+				<!-- <div class="interes">
+					<label for="reclamos">
+						<input type="checkbox" checked id="reclamos" name="interes" value="reclamos">Reclamos
+					</label>		
+					<label for="comentarios">
+						<input type="checkbox" id="comentarios" name="interes" value="comentarios">Comentarios
+					</label>		
+					<label for="otros" >
+						<input type="checkbox" id="otros" neme="interes" value="otros"> Otros
+					</label>		
+				</div> -->
+			</div>
+			<div class="col2">
+				<label for="comentarios">Comentarios</label>
+				<textarea name="comentarios" id="comentarios" cols="25" rows="9"></textarea>
+				<input type="submit" value="Enviar" class="button">
+			</div>
+		</form>
+	</div>
+</footer>	
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script> -->
+	<script>
+
+		var consulta = window.matchMedia('(max-width: 500px)');
+		consulta.addListener(mediaQuery);
+
+		var $burgerButton = document.getElementById('burger-button');
+		var $menu = document.getElementById('menu');
+
+		function togglemenu(){
+			$menu.classList.toggle('active')};
+			function mediaQuery(){
+				if (consulta.matches) {
+			//si se cumple hago esto
+			console.log('se cumplio la condicion');
+			$burgerButton.addEventListener('touchstart',togglemenu);
+			
+		}else{
+			console.log('no se cumplio la condicion');
+			$burgerButton.removeEventListener('touchstart',togglemenu);
+
+		}
+	}
+	mediaQuery();
+
+	// lazy loading
+	// var bLazy = new BLazy({
+	// 	selector:'img' 	});
+
+// $burgerButton.addEventListener('touchstart',togglemenu)
+
+// function togglemenu()
+// {$menu.classList.toggle('active')
+// };
+
+</script>
+</body>
+</html>
